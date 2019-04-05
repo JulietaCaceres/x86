@@ -1,7 +1,6 @@
 #include <unistd.h>
 #include<string.h>
-extern void my_exit(int status);
-
+extern void __attribute__((noreturn)) my_exit(int status);
 const char msg[] = "Hello, world!\n";
 
 int main(void) {
