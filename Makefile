@@ -15,6 +15,8 @@ PROG += $(patsubst %.c, %, $(SRCS))
 
 all: $(PROG)
 
+sys_%: sys_%.S
+	$(CC) $(ASFLAGS) $(CPPFLAGS) -nostartfiles $< -o $@
 clean:
 	rm -f $(PROG) *.o core
 
