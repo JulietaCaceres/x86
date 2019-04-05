@@ -15,6 +15,7 @@ PROG += $(patsubst %.c, %, $(SRCS))
 
 all: $(PROG)
 
+hello: hello.c lib/exit.c
 sys_%: sys_%.S
 	$(CC) $(ASFLAGS) $(CPPFLAGS) -nostartfiles $< -o $@
 clean:
